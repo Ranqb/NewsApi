@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ElF-F4-TsB">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FtN-Op-s9R">
+            <objects>
+                <navigationController id="ElF-F4-TsB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MdB-NP-s3w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ANc-az-bQp" kind="relationship" relationship="rootViewController" id="gSC-wn-KGg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6U-gZ-h2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="52"/>
+        </scene>
+        <!--News List View Controller-->
+        <scene sceneID="ole-gO-wq4">
+            <objects>
+                <viewController id="ANc-az-bQp" customClass="NewsListViewController" customModule="NewsAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baV-bH-t8x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xpW-ar-Qjx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.93717283009999997" green="0.93730741740000001" blue="0.93714338539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ANc-az-bQp" id="RWM-X9-Sec"/>
+                                    <outlet property="delegate" destination="ANc-az-bQp" id="Kai-Pe-Pdm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xpW-ar-Qjx" firstAttribute="trailing" secondItem="DUA-5e-c9w" secondAttribute="trailing" id="22S-ug-Zr0"/>
+                            <constraint firstItem="xpW-ar-Qjx" firstAttribute="leading" secondItem="DUA-5e-c9w" secondAttribute="leading" id="37V-O0-cek"/>
+                            <constraint firstItem="xpW-ar-Qjx" firstAttribute="bottom" secondItem="DUA-5e-c9w" secondAttribute="bottom" id="3JX-hF-NgG"/>
+                            <constraint firstItem="xpW-ar-Qjx" firstAttribute="top" secondItem="DUA-5e-c9w" secondAttribute="top" id="nDy-rn-FMX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DUA-5e-c9w"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VMa-BF-UcE"/>
+                    <connections>
+                        <outlet property="tableView" destination="xpW-ar-Qjx" id="Pwk-Za-S2C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RnA-qp-XJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="52.623688155922046"/>
+        </scene>
+    </scenes>
+</document>
